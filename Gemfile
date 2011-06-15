@@ -26,4 +26,10 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'capybara', '1.0.0'
+  gem 'steak', '2.0.0'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '2.6.1'
 end
