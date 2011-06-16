@@ -1,1 +1,54 @@
 My "Rails 3.1 Lab" Blog Engine.
+
+v0.1 = [notreleased] ===========================================================
+
+================================================================================
+
+FEATURES OUTLINE
+
+- Blog
+  - MUST have a name
+  - MUST have url date scoped filter (e.g. http://domain.com/2011/05 )
+  - MUST have url category scoped filter (e.g. http://domain.com/category/announcements )
+  - MUST have url tag scoped filter (e.g. http://domain.com/tag/funny )
+
+- Posts
+  - MUST have a title
+  - MUST have content
+  - MUST have a customizable permalink
+  - MUST have one or more Authors
+  - MAY belong to one or more Categories
+  - MAY have one or more Tags
+  - MAY have one or more Comments
+
+- Post Series
+  - MUST have at least one post
+  - MUST have one or more Authors
+  - MAY have one or more Comments
+
+- Authors
+  - MUST have a name
+  - MAY have a description (bio)
+
+- Categoties
+  - MUST have a name
+
+- Tags
+  - MUST have a name
+
+- Comments
+  - MUST have content
+
+THE GOOD PARTS
+
+(for my own dev learning)
+- Acceptance tests with Steak
+- Unit tests with RSpec
+- JavaScript tests with Jasmine
+- Templates
+  - Use template inheritance (ApplicationControlle.prepend_view_path)
+
+(for PostMachine users)
+- Full-text search
+- Templates
+  - Upload a ZIP file
