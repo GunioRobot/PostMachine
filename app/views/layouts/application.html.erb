@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Postmachine</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="<%= locale %>">
+  <head>
+    <title>Postmachine</title>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
