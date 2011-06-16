@@ -32,4 +32,5 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '2.6.1'
+  gem 'jasmine'
 end
