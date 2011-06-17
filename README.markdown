@@ -42,6 +42,7 @@ _This project exists for my own learning purposes only_
 - Acceptance tests with Steak
 - Unit tests with RSpec
 - JavaScript tests with Jasmine
+- Nice, clean and simple HTML5 markup
 - Templates
     - Use template inheritance (`ApplicationControlle.prepend_view_path`)
 
