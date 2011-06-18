@@ -11,17 +11,9 @@ feature 'Homepage', %q{
 
     visit '/'
 
-    within('article header hgroup h1') do
-      page.should have_content('Welcome to my blog')
-    end
-
-    within('article p') do
-      page.should have_content('This is my first post, and it supports')
-    end
-
-    within('article p em') do
-      page.should have_content('markdown')
-    end
+    page.should have_css('article header hgroup h1', :text => 'Welcome to my blog')
+    page.should have_css('article p', :text => 'This is my first post, and it supports')
+    page.should have_css('article p em', :text => 'markdown')
 
   end
 end
