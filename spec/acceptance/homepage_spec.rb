@@ -5,11 +5,9 @@ feature 'Homepage', %q{
   As a reader
   I want to read the blog
 } do
-
   scenario 'should display a blog entry' do
-    create_post :title => 'Welcome to my blog',
-                :content => 'This is my first post, and it supports _markdown_.',
-                :published => true
+
+    post = Post.create({ :title => 'Welcome to my blog', :content => 'This is my first post, and it supports _markdown_.', :published => true })
 
     visit '/'
 
@@ -22,5 +20,4 @@ feature 'Homepage', %q{
     end
 
   end
-
 end

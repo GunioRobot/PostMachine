@@ -1,0 +1,12 @@
+<section id="posts">
+<% if @posts.any? ; for post in @posts %>
+  <article id="post-<%= post.id %>">
+    <header>
+      <hgroup>
+        <h1><%= post.title %></h1>
+      </hgroup>
+    </header>
+    <%= post.content %>
+  </article>
+<% end ; end %>
+</section>
