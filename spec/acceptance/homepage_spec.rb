@@ -16,7 +16,7 @@ feature 'Homepage', %q{
     end
 
     within('article') do
-      page.should have_content('<p>This is my first post, and it supports <em>markdown<em>.<p>')
+      page.should have_content('<p>This is my first post, and it supports <em>markdown</em>.</p>')
     end
 
   end
