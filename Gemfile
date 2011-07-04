@@ -14,7 +14,7 @@ gem 'jquery-rails'
 group :test do
   gem 'turn', :require => false
   gem 'capybara', '1.0.0'
-  gem 'steak', '2.0.0'
+  gem 'database_cleaner'
 end
 
 group :development, :test do

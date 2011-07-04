@@ -1,12 +1,12 @@
-require 'acceptance/acceptance_helper'
+require 'spec_helper'
 
 feature 'Homepage', %q{
   In order to spend some spare time
   As a reader
   I want to read the blog
 } do
-  scenario 'should display a blog entry' do
-
+  scenario 'should display a blog entry', :js => true do
+    # If there are any Posts, should display in the homepage
     post = Post.create :title => 'Welcome to my blog',
                        :content => 'This is my first post, and it supports _markdown_.'
 
