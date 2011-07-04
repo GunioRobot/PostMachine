@@ -7,13 +7,17 @@ feature 'Homepage', %q{
 } do
   scenario 'should display a blog entry' do
 
-    post = Post.create({ :title => 'Welcome to my blog', :content => 'This is my first post, and it supports _markdown_.', :published => true })
+    post = Post.create :title => 'Welcome to my blog',
+                       :content => 'This is my first post, and it supports _markdown_.'
 
-    visit '/'
+    post.publish
+
+    visit root_path
 
     page.should have_css('article header hgroup h1', :text => 'Welcome to my blog')
     page.should have_css('article p', :text => 'This is my first post, and it supports')
     page.should have_css('article p em', :text => 'markdown')
+    page.should have_css('article footer p time', :text => post.created_at.strftime("%D"))
 
   end
 end

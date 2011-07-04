@@ -13,7 +13,7 @@ describe PostsController do
 
     it 'should assing @posts' do
       posts = [mock_model(Post), mock_model(Post)]
-      Post.stub_chain(:all, :reverse).and_return(posts)
+      Post.stub(:published).and_return(posts)
 
       get 'index'
 

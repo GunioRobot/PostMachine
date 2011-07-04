@@ -1,7 +1,7 @@
 Postmachine::Application.routes.draw do
-  get "posts/index"
+  get 'posts/index'
 
-  root :to => "posts#index"
+  root :to => 'posts#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

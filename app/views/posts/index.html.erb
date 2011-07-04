@@ -7,6 +7,9 @@
       </hgroup>
     </header>
     <%= raw post.content_html %>
+    <footer>
+      <p>Published on <time datetime="<%= post.created_at %>"><%= post.created_at.strftime("%D") %></time></p>
+    </footer>
   </article>
 <% end ; end %>
 </section>
